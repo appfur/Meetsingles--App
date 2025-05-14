@@ -19,7 +19,6 @@ void main() async {
   Get.put(ChatController());
   Get.put(DashboardController());
 
-
   runApp(
     DevicePreview(
       enabled: false,
@@ -46,7 +45,7 @@ class MyApp extends StatelessWidget {
               appBarTheme: AppBarTheme(color: AppColor.backgroundColor),
             ),
             // initialRoute: AppPages.initial,
-            initialRoute: Routes.navBarView,
+            initialRoute: Routes.initial,
             getPages: AppPages.pages,
           )),
     );

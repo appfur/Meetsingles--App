@@ -1,70 +1,3 @@
-# Flutter & Dart
-.dart_tool/
-.packages
-.flutter-plugins
-.flutter-plugins-dependencies
-.melos_tool/
-.pub-cache/
-build/
-.idea/
-.vscode/
-.sconsign.dblite
-
-# iOS
-ios/Flutter/Flutter.framework
-ios/Flutter/Flutter.podspec
-ios/Flutter/Generated.xcconfig
-ios/Flutter/ephemeral/
-ios/Runner.xcworkspace/
-ios/Pods/
-ios/.symlinks/
-ios/.generated/
-
-# Android
-android/
-android/.gradle/
-android/captures/
-android/.idea/
-android/local.properties
-android/app/debug/
-android/app/profile/
-android/app/release/
-
-# macOS
-macos/Flutter/ephemeral/
-macos/.generated/
-
-# Linux
-linux/flutter/ephemeral/
-linux/.generated/
-
-# Windows
-windows/flutter/ephemeral/
-windows/.generated/
-
-# Web
-web/.dart_tool/
-web/.packages
-
-# IntelliJ & VS Code
-*.iml
-*.ipr
-*.iws
-*.sw?
-.idea/
-.vscode/
-
-# Misc
-*.log
-*.tmp
-*.DS_Store
-*.lock
-pubspec.lock
-
-# Exceptions (if you want to track these files)
-!/android/app/src/main/res/
-!/ios/Runner/Assets.xcassets/
-
 # Miscellaneous
 *.class
 *.log
@@ -110,4 +43,3 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-

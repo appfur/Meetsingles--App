@@ -11,16 +11,14 @@ class AppPages {
 
   static final pages = [
     GetPage(
-      name: initial,
+      name: Routes.initial,
       page: () => const OnboardingScreen(),
       // binding: SplashBinding(),
     ),
- 
     GetPage(
       name: Routes.navBarView,
       page: () => const BottomNavBar(),
       // binding: HomeBindings(),
     ),
- 
   ];
 }

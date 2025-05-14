@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:meet_singles/App/Authentication/controller/auth_controller.dart';
 import 'package:meet_singles/App/Authentication/view/otp_screen.dart';
 import 'package:meet_singles/config/theme/app_color.dart';
@@ -39,72 +40,24 @@ class _PhoneNumberVerificationState extends State<PhoneNumberVerification> {
                 fontWeight: FontWeight.w600,
               ),
               SizedBox(height: 32),
-              Row(
-                children: [
-                  Expanded(
-                    flex: 3,
-                    child: Container(
-                      padding: EdgeInsets.only(left: 12, right: 2),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: AppColor.primaryColor,
-                        ),
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      child: DropdownButtonHideUnderline(
-                        child: DropdownButton<String>(
-                          value: "NG +234",
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: AppColor.blackColor,
-                          ),
-                          dropdownColor: AppColor.backgroundColor,
-                          elevation: 0,
-                          items: [
-                            DropdownMenuItem(
-                              value: "NG +234",
-                              child: Text("NG +234"),
-                            ),
-                            DropdownMenuItem(
-                              value: "US +1",
-                              child: Text("US +1"),
-                            ),
-                            DropdownMenuItem(
-                              value: "UK +44",
-                              child: Text("UK +44"),
-                            ),
-                          ],
-                          onChanged: (value) {},
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 10),
-                  Expanded(
-                    flex: 6,
-                    child: TextField(
-                      keyboardType: TextInputType.phone,
-                      controller: authController.phoneNumberController,
-                      decoration: InputDecoration(
-                        hintText: "Phone number",
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(16),
-                          borderSide:
-                              BorderSide(color: AppColor.primaryColor.shade100),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: AppColor.primaryColor),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(16),
-                          borderSide:
-                              BorderSide(color: AppColor.primaryColor.shade100),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+              //PHONE FIELD
+              IntlPhoneField(
+                controller: authController.phoneNumberController,
+                decoration: InputDecoration(
+                  focusColor: AppColor.primaryColor.shade100,
+                  labelText: 'Phone Number',
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: BorderSide(
+                        width: 0.1,
+                        style: BorderStyle.none,
+                      )), // Border for entire widget
+                ),
+                style: TextStyle(), // Style for phone number
+                dropdownTextStyle: TextStyle(), // Style for country code
+                dropdownIcon: Icon(Icons.arrow_drop_down),
+                showCountryFlag: false,
+                // separator: SizedBox(width: 12), // Space between country code and number
               ),
               SizedBox(height: 16),
               TextWidget(
@@ -130,3 +83,78 @@ class _PhoneNumberVerificationState extends State<PhoneNumberVerification> {
     );
   }
 }
+
+
+
+
+
+
+
+
+// Row(
+//                 children: [
+//                   Expanded(
+//                     flex: 3,
+//                     child: Container(
+//                       padding: EdgeInsets.only(left: 12, right: 2),
+//                       decoration: BoxDecoration(
+//                         border: Border.all(
+//                           color: AppColor.primaryColor,
+//                         ),
+//                         borderRadius: BorderRadius.circular(16),
+//                       ),
+//                       child: DropdownButtonHideUnderline(
+//                         child: DropdownButton<String>(
+//                           value: "NG +234",
+//                           style: TextStyle(
+//                             fontSize: 16,
+//                             color: AppColor.blackColor,
+//                           ),
+//                           dropdownColor: AppColor.backgroundColor,
+//                           elevation: 0,
+//                           items: [
+//                             DropdownMenuItem(
+//                               value: "NG +234",
+//                               child: Text("NG +234"),
+//                             ),
+//                             DropdownMenuItem(
+//                               value: "US +1",
+//                               child: Text("US +1"),
+//                             ),
+//                             DropdownMenuItem(
+//                               value: "UK +44",
+//                               child: Text("UK +44"),
+//                             ),
+//                           ],
+//                           onChanged: (value) {},
+//                         ),
+//                       ),
+//                     ),
+//                   ),
+//                   SizedBox(width: 10),
+//                   Expanded(
+//                     flex: 6,
+//                     child: TextField(
+//                       keyboardType: TextInputType.phone,
+//                       controller: authController.phoneNumberController,
+//                       decoration: InputDecoration(
+//                         hintText: "Phone number",
+//                         border: OutlineInputBorder(
+//                           borderRadius: BorderRadius.circular(16),
+//                           borderSide:
+//                               BorderSide(color: AppColor.primaryColor.shade100),
+//                         ),
+//                         focusedBorder: OutlineInputBorder(
+//                           borderRadius: BorderRadius.circular(16),
+//                           borderSide: BorderSide(color: AppColor.primaryColor),
+//                         ),
+//                         enabledBorder: OutlineInputBorder(
+//                           borderRadius: BorderRadius.circular(16),
+//                           borderSide:
+//                               BorderSide(color: AppColor.primaryColor.shade100),
+//                         ),
+//                       ),
+//                     ),
+//                   ),
+//                 ],
+//               ),

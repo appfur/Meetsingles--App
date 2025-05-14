@@ -5,4 +5,5 @@ class Routes {
   static const navBarView = '/navBarView/';
   static const home = '/home/';
   static const profileView = '/profileView/';
+  static const initial = '/onBoarding/';
 }
