@@ -4,14 +4,14 @@
             "outputFile": "com.example.meet_singles.app-mergeDebugResources-40:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/mac/Documents/meet_singles/android/app/src/main/res/values-night/styles.xml",
+                    "source": "C:\\Users\\LENOVO\\app dev\\appFur\\Meetsingles--App\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
-                        "startOffsets": "172,817",
+                        "startOffsets": "175,831",
                         "endLines": "7,16",
                         "endColumns": "12,12",
-                        "endOffsets": "475,981"
+                        "endOffsets": "482,997"
                     },
                     "to": {
                         "startLines": "2,6",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/mac/.gradle/caches/transforms-3/c029d973be620a8c27af21475e044d05/transformed/appcompat-1.1.0/res/values-night-v8/values-night-v8.xml",
+                    "source": "C:\\Users\\LENOVO\\.gradle\\caches\\transforms-3\\3823349641d0020af3e00e841b026e79\\transformed\\appcompat-1.1.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

@@ -129,36 +129,40 @@ class _DashboardMatchesState extends State<DashboardMatches>
                               top: 16,
                               left: 16,
                               right: 16,
-                              child: Obx(
-                                () => Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: List.generate(
-                                      profiles["mediaList"].length, (index) {
-                                    return AnimatedContainer(
-                                      duration: Duration(milliseconds: 300),
-                                      margin: const EdgeInsets.symmetric(
-                                          horizontal: 4),
-                                      // width: dashboardController.currentPage.value == index ? 12 : 8,
-                                      width: (MediaQuery.of(context)
-                                                  .size
-                                                  .width -
-                                              64 -
-                                              ((profiles["mediaList"].length) *
-                                                  8)) /
-                                          profiles["mediaList"].length,
-                                      height: 8,
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.rectangle,
-                                        borderRadius: BorderRadius.circular(8),
-                                        color: dashboardController
-                                                    .currentPage.value ==
-                                                index
-                                            ? AppColor.whiteColor
-                                            : AppColor.whiteColor
-                                                .withOpacity(0.5),
-                                      ),
-                                    );
-                                  }),
+                              child: SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Obx(
+                                  () => Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: List.generate(
+                                        profiles["mediaList"].length, (index) {
+                                      return AnimatedContainer(
+                                        duration: Duration(milliseconds: 300),
+                                        margin: const EdgeInsets.symmetric(
+                                            horizontal: 4),
+                                        // width: dashboardController.currentPage.value == index ? 12 : 8,
+                                        width:
+                                            (MediaQuery.of(context).size.width *
+                                                        0.8 -
+                                                    ((profiles["mediaList"]
+                                                            .length) *
+                                                        8)) /
+                                                profiles["mediaList"].length,
+                                        height: 8,
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.rectangle,
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                          color: dashboardController
+                                                      .currentPage.value ==
+                                                  index
+                                              ? AppColor.whiteColor
+                                              : AppColor.whiteColor
+                                                  .withOpacity(0.5),
+                                        ),
+                                      );
+                                    }),
+                                  ),
                                 ),
                               ),
                             ),
@@ -171,7 +175,8 @@ class _DashboardMatchesState extends State<DashboardMatches>
                                     child: GestureDetector(
                                       behavior: HitTestBehavior.translucent,
                                       onTap: () {
-                                        final controller = _pageControllers[index];
+                                        final controller =
+                                            _pageControllers[index];
                                         if (controller.page!.round() > 0) {
                                           dashboardController
                                               .currentPage.value -= 1;

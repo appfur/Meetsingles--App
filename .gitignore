@@ -1,0 +1,113 @@
+# Flutter & Dart
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.melos_tool/
+.pub-cache/
+build/
+.idea/
+.vscode/
+.sconsign.dblite
+
+# iOS
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/ephemeral/
+ios/Runner.xcworkspace/
+ios/Pods/
+ios/.symlinks/
+ios/.generated/
+
+# Android
+android/
+android/.gradle/
+android/captures/
+android/.idea/
+android/local.properties
+android/app/debug/
+android/app/profile/
+android/app/release/
+
+# macOS
+macos/Flutter/ephemeral/
+macos/.generated/
+
+# Linux
+linux/flutter/ephemeral/
+linux/.generated/
+
+# Windows
+windows/flutter/ephemeral/
+windows/.generated/
+
+# Web
+web/.dart_tool/
+web/.packages
+
+# IntelliJ & VS Code
+*.iml
+*.ipr
+*.iws
+*.sw?
+.idea/
+.vscode/
+
+# Misc
+*.log
+*.tmp
+*.DS_Store
+*.lock
+pubspec.lock
+
+# Exceptions (if you want to track these files)
+!/android/app/src/main/res/
+!/ios/Runner/Assets.xcassets/
+
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+*.env
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
